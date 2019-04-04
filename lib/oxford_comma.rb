@@ -10,6 +10,10 @@ def oxford_comma(array)
     array << final
     return array.join(", ")
   else array.length > 3
-    array.join(", ")
+    last_element = array.pop
+    and_string = "and "
+    final = and_string.concat(last_element)
+    array << final
+    return array.join(", ")
   end
 end
